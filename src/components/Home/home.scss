@@ -1,0 +1,21 @@
+.blogs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-shadow: 10px 10px 10px black;
+  margin: 25px;
+  .blog {
+    box-shadow: 10px 10px 10px black;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    button {
+      background-color: black;
+      color: rgb(255, 196, 0);
+      padding: 5px;
+    }
+  }
+}
