@@ -9,6 +9,7 @@ import Home from "./components/Home/Home";
 
 import "./app.scss";
 import UserBlogs from "./components/UserBlogs/UserBlogs";
+import AddBlog from "./components/AddBlog/AddBlog";
 function App() {
   return (
     <Container>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/join" element={<Join />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/blogs" element={<UserBlogs />} />
+          <Route path="/addBlog" element={<AddBlog />} />
         </Routes>
       </div>
     </Container>

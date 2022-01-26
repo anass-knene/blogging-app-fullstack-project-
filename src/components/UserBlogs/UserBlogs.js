@@ -10,6 +10,7 @@ import SwiperCore, { EffectCoverflow, Navigation, Pagination } from "swiper";
 import toast, { Toaster } from "react-hot-toast";
 import Swal from "sweetalert2";
 import { Button, Modal } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 export default function UserBlogs() {
   const [show, setShow] = useState(false);
@@ -18,9 +19,10 @@ export default function UserBlogs() {
   const handleShow = () => setShow(true);
   const token = localStorage.getItem("token");
   const { userBlog } = useContext(MyContext);
-
+  const navigate = useNavigate();
   const blogUpdate = (BLI) => {
     if (handle1Close) {
+      console.log(BLI);
     }
   };
   const updateBlog = (blID) => {
@@ -69,6 +71,12 @@ export default function UserBlogs() {
               </h1>
               <div className="userFullName animate__animated animate__fadeInRight">
                 <h2>{blogUser.firstName.toUpperCase()} </h2>
+                <input
+                  type="button"
+                  className="btn btn-primary ms-3"
+                  value="Create New Blog"
+                  onClick={() => navigate("/addBlog")}
+                />
               </div>
             </div>
           );
