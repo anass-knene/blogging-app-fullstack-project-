@@ -8,6 +8,7 @@ import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
 
 import "./app.scss";
+import UserBlogs from "./components/UserBlogs/UserBlogs";
 function App() {
   return (
     <Container>
@@ -17,8 +18,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="join" element={<Join />} />
-          <Route path="profile" element={<Profile />} />
+          <Route path="/join" element={<Join />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/blogs" element={<UserBlogs />} />
         </Routes>
       </div>
     </Container>
